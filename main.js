@@ -30,7 +30,7 @@ var startNum = Math.floor((Math.random() * 2) + 1);
 	}
 console.log(currentPlayer);
 });
-
+// --------------------------------
 
 
 
@@ -40,23 +40,40 @@ console.log(currentPlayer);
 $(".playSquares td").on("click", function(event) {
 		if ($(this).attr('class','notPlayed') && currentPlayer === playerOne) {
 			$(this).text(currentPlayer.mark);
+			board.push( $(this).attr('id'));
 			$(this).attr('class', 'X played');
 			currentPlayer = playerTwo;
 			console.log($(this));
 		} else if ($(this).attr('class','notPlayed') && currentPlayer === playerTwo) {
 			$(this).text(currentPlayer.mark);
+			board.push(currentPlayer.mark);
 			$(this).attr('class', 'O played');
 			currentPlayer = playerOne;
 			console.log($(this));
 		}
-
+console.log(board);
 });
+// ----------------------------------
+
+// SCORING ----
+
+var board = [];
 
 
+
+
+
+
+
+
+
+
+// -----Reset Button ---------------
 $("#reset").on("click", function(event) {
 	$('.playSquares td').empty();
-	$('.playSquares td').text('?');
+	$('.playSquares td').text('');
 	$('.playSquares td').attr('class','notPlayed');
+	board = [];
 });
-
+// -----------------------
 
