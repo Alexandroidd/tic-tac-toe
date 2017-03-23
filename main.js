@@ -3,11 +3,13 @@ console.log("this is working");
 // PLAYER DATA ----
 var playerOne = {
 	name: "I am making an X",
-	mark: "X"
+	mark: "X",
+	class: "X"
 };
 var playerTwo = {
 	name: "I am making an O",
-	mark: "O"
+	mark: "O",
+	class: "O"
 };
 
 var currentPlayer;
@@ -38,14 +40,19 @@ console.log(currentPlayer);
 $(".playSquares td").on("click", function(event) {
 		if ($(this).attr('class','notPlayed') && currentPlayer === playerOne) {
 			$(this).text(currentPlayer.mark);
-			$(this).attr('class', 'X');
+			$(this).attr('class', 'X played');
 			currentPlayer = playerTwo;
 			console.log($(this));
 		} else if ($(this).attr('class','notPlayed') && currentPlayer === playerTwo) {
 			$(this).text(currentPlayer.mark);
-			$(this).attr('class', 'O');
+			$(this).attr('class', 'O played');
 			currentPlayer = playerOne;
 			console.log($(this));
+
+		} else if ($(this).attr('class','O') && currentPlayer === playerOne) {
+			$(this).attr('class','O');
+		} else if ($(this).attr('class','X') && currentPlayer === playerTwo) {
+			$(this).attr('class','X');
 		}
 
 
@@ -63,6 +70,7 @@ $(".playSquares td").on("click", function(event) {
 		// } else if (this.text === "O" || "X") {
 		// 	return;
 		// }
+		}
 
 });
 
