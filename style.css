@@ -1,0 +1,26 @@
+* {
+	padding: 40px;
+	border-color: green;
+	background-color: beige;
+}
+td {
+	font-family: 'arial';
+	font-size: 20px;
+	/*column-width: 10px;*/
+}
+table {
+	width: 600px;
+	table-layout: fixed;
+}
+#reset {
+	font-family: 'arial';
+	font-size: 20px;
+}
+.playSquares td {
+border: 5px solid black;
+width: 40px;
+
+}
+.playSquares td:hover {
+	border: 3px solid red;
+}
