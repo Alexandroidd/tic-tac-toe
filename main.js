@@ -50,34 +50,13 @@ $(".playSquares td").on("click", function(event) {
 			console.log($(this));
 		}
 
-		// } else if ($(this).attr('class','O') && currentPlayer === playerOne) {
-		// 	$(this).attr('class','O');
-		// } else if ($(this).attr('class','X') && currentPlayer === playerTwo) {
-		// 	$(this).attr('class','X');
-		// }
-
-
-
-		// {
-		// 	if (currentPlayer === playerOne) {
-		// 		$(this).text("X");
-		// 		currentPlayer = playerTwo;
-		// 		$(this).class = "played";
-		// 	} else if (currentPlayer === playerTwo) {
-		// 		$(this).text('O');
-		// 		currentPlayer = playerOne;
-		// 		$(this).class = "played";
-		// 	}
-		// } else if (this.text === "O" || "X") {
-		// 	return;
-		// }
-
 });
 
 
 $("#reset").on("click", function(event) {
 	$('.playSquares td').empty();
-	$('.playSquares td').text('???');
+	$('.playSquares td').text('?');
+	$('.playSquares td').attr('class','notPlayed');
 });
 
 
