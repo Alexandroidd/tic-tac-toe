@@ -24,3 +24,6 @@ width: 40px;
 .playSquares td:hover {
 	border: 3px solid red;
 }
+.played {
+	pointer-events: none;
+}

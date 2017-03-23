@@ -48,12 +48,13 @@ $(".playSquares td").on("click", function(event) {
 			$(this).attr('class', 'O played');
 			currentPlayer = playerOne;
 			console.log($(this));
-
-		} else if ($(this).attr('class','O') && currentPlayer === playerOne) {
-			$(this).attr('class','O');
-		} else if ($(this).attr('class','X') && currentPlayer === playerTwo) {
-			$(this).attr('class','X');
 		}
+
+		// } else if ($(this).attr('class','O') && currentPlayer === playerOne) {
+		// 	$(this).attr('class','O');
+		// } else if ($(this).attr('class','X') && currentPlayer === playerTwo) {
+		// 	$(this).attr('class','X');
+		// }
 
 
 
@@ -70,7 +71,6 @@ $(".playSquares td").on("click", function(event) {
 		// } else if (this.text === "O" || "X") {
 		// 	return;
 		// }
-		}
 
 });
 
